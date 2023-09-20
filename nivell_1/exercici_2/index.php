@@ -1,22 +1,26 @@
 <?php
-    include ('classes.php'); 
 
-    $titol1 = "TEMA 4 : PHP I OBJECTES";
-    $titol2 = "NIVELL 1 - EXERCICI 2";
+    include 'rectangle.php'; 
+    include 'triangle.php'; 
 
-    echo $titol1."<br>";
-    echo $titol2."<br>";
 
-    echo "<br>";
-    echo "<br>";
+    echo "TEMA 4 : PHP I OBJECTES\n";
+    echo "NIVELL 1 - EXERCICI 2\n";
+
+    echo "\n";
     
-    $triangle1 = new Triangle (12,3);
-    $triangle1 -> areaTriangle();
+    $rectangle = new Rectangle (12.25, 3.4678);
 
-    echo "<br>";
-    echo "<br>";
+    echo "Rectangle Area = ".round($rectangle -> calculateArea(),2)." u²\n";
 
-    $rectangle1 = new Rectangle (12, 3);
-    $rectangle1 -> areaRectangle();
+    echo "\n";
+
+    $triangle = new Triangle (12.25, 3.4678);
+    
+    echo "Triangle Area = ".round($triangle -> calculateArea(),2)." u²\n";
+
+    echo "\n";
+
+    
 
 ?>
